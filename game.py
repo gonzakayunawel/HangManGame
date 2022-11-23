@@ -1,10 +1,12 @@
 import os, random
 
 def run():
-  words = ['perro', 'gato', 'conejo', 'caballo']
+  words = ['perro', 'gato', 'conejo', 'caballo', 'vaca', 'cerdo', 'gallina', 
+          'gallo', 'pato', 'buey', 'oveja', 'cordero', 'ganso', 'pollo', 'toro', 'yegua','potrillo', 'potro', 'burro']
   def present():
     os.system('clear')
     print('Welcome! to the HangManGame')
+    print('You have to guess the word if you want to win.\nOnly have 5 trys to win.\nClue: The words are about farm animals.\nGood luck!')
     print('\n')
     
   present()
@@ -18,7 +20,7 @@ def run():
     blank = '_'*len(word)
     c = 0
     user_word = ''
-    while c < 3:
+    while c < 5:
       user_letter = input('Insert a letter... ')
       print('\n')
       
@@ -27,7 +29,8 @@ def run():
         blank = list(blank)
         blank[index] = word[index]
         blank = blank
-        print(blank)
+        blank = ''.join(blank)
+        print('     ',blank)
         print('\n')
         print('Yeah. Your letter is in the word!')
         user_word = ''.join(blank)
@@ -42,7 +45,8 @@ def run():
         blank = list(blank)
         blank[index2] = word[index2]
         blank = blank
-        print(blank)
+        blank = ''.join(blank)
+        print('     ',blank)
         print('\n')
         print('Yeah. Your letter is in the word!')
         user_word = ''.join(blank)
@@ -56,7 +60,7 @@ def run():
       print('\n')
       print('You win.')
       print('Congratulations')
-    elif c == 3:
+    elif c == 5:
       print('\n')
       print('You lose.')
       print('The game is over.')
