@@ -17,6 +17,7 @@ def run():
   def game():
     blank = '_'*len(word)
     c = 0
+    user_word = ''
     while c < 3:
       user_letter = input('Insert a letter... ')
       print('\n')
