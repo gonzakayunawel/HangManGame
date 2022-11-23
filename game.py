@@ -20,7 +20,10 @@ def run():
     blank = '_'*len(word)
     c = 0
     user_word = ''
+    print('The word is: ', blank)
+    print('\n')
     while c < 5:
+      print('\n')
       user_letter = input('Insert a letter... ')
       print('\n')
       
