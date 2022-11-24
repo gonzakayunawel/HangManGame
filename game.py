@@ -20,7 +20,7 @@ def run():
     blank = '_'*len(word)
     c = 0
     user_word = ''
-    print('The word is: ', blank)
+    print('The word is: ', ' '.join(blank))
     print('\n')
     while c < 5:
       print('\n')
